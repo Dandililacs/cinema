@@ -1,3 +1,14 @@
+/* Import Liham font if it's available as a web font */
+
+.cinemaTitle
+{
+    font-size: 600%; /* Increased from 500% to make it larger */
+    font-family: 'Audiowide'; /* Proper font-family syntax */
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add some spacing */
+    color: #000000; /* Ensure it's black */
+}
+
 .Requirements
 {
     background-color: #ffffff;
@@ -8,7 +19,7 @@
     width: 80%;
     margin: 0;
     align-items: left;
-    width: 100%;
+    width: 300%;
     height: 30%;
 
 }
@@ -17,6 +28,7 @@
 {
     background-color: #000000;
     color: white;
+    font-size: 200%;
 }
 .Pop /*this will make it so that the text and image can be together for the "Improves Social and Life Skills" section + style it*/
 {
@@ -26,13 +38,14 @@
     width: 80%;
     margin: 0 auto;
     align-items: right;
-    width: 100%;
+    width: 300%;
     height: 30%;
 }
 .popText
 {
     background-color: #000000;
     color: white;
+    font-size: 200%;
 }
 .LetsGo
 {
@@ -42,22 +55,24 @@
     width: 80%;
     margin: 0;
     align-items: left;
-    width: 100%;
+    width: 300%;
     height: 30%;
 }
 .letsGoText
 {
     background-color: #000000;
     color: white;
+    font-size: 200%;
 }
 .buttons
 {
     display: flex;
     gap: 20px;
     padding: 50px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     align-items: center;
+    gap: 30%;
 }
 .submissionButton /*This styles the submission button so that it isn't ugly*/
 {
@@ -69,6 +84,11 @@
     transition: 0.3s;
     background-image: none;
     border-radius:54px; /*this part makes it a rounded button for some reason*/
+ 
+    padding-left: 100%;
+    padding-right: 100%;
+    padding-top: 10%;
+    padding-bottom: 10;
 }
 .helpButton /*This styles the submission button so that it isn't ugly*/
 {
@@ -80,4 +100,17 @@
     transition: 0.3s;
     background-image: none;
     border-radius:54px; /*this part makes it a rounded button for some reason*/
+   
+    padding-left: 100%;
+    padding-right: 100%;
+    padding-top: 10;
+    padding-bottom: 10;
+}
+.pathToCinema
+{
+    background-color: #000000;
+    color: white;
+    font-size: 200%;
+    text-align: center;
+    width: 100%;
 }
