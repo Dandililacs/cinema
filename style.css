@@ -1,0 +1,83 @@
+.Requirements
+{
+    background-color: #ffffff;
+    
+    display: flex;
+    gap: 100px;
+    padding: 0px;
+    width: 80%;
+    margin: 0;
+    align-items: left;
+    width: 100%;
+    height: 30%;
+
+}
+
+.requirementsText
+{
+    background-color: #000000;
+    color: white;
+}
+.Pop /*this will make it so that the text and image can be together for the "Improves Social and Life Skills" section + style it*/
+{
+    display: flex;
+    gap: 20px;
+    padding: 50px;
+    width: 80%;
+    margin: 0 auto;
+    align-items: right;
+    width: 100%;
+    height: 30%;
+}
+.popText
+{
+    background-color: #000000;
+    color: white;
+}
+.LetsGo
+{
+    display: flex;
+    gap: 80px;
+    padding: 10px;
+    width: 80%;
+    margin: 0;
+    align-items: left;
+    width: 100%;
+    height: 30%;
+}
+.letsGoText
+{
+    background-color: #000000;
+    color: white;
+}
+.buttons
+{
+    display: flex;
+    gap: 20px;
+    padding: 50px;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+}
+.submissionButton /*This styles the submission button so that it isn't ugly*/
+{
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    background-color: #000000;
+    transition: 0.3s;
+    background-image: none;
+    border-radius:54px; /*this part makes it a rounded button for some reason*/
+}
+.helpButton /*This styles the submission button so that it isn't ugly*/
+{
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    background-color: #000000;
+    transition: 0.3s;
+    background-image: none;
+    border-radius:54px; /*this part makes it a rounded button for some reason*/
+}
