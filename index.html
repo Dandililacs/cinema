@@ -1,34 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hackclub Cinema</title>
+  <title>Hackclub Cinema - Scroll</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.18/bundled/lenis.min.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .horizontal-scroll {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: 100vh;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    .screen {
+      flex: 0 0 100vw;
+      height: 100vh;
+      scroll-snap-align: start;
+      overflow-y: auto;
+      box-sizing: border-box;
+      background: #fff;
+    }
+  </style>
 </head>
 <body>
-  <div class="lenis-section">
-    <div>
-      <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width="100%">
-      <div class="cinemaTitle">
-        <img src="cinema-title.png" alt="CINEMA title" style="display:block; margin:auto; width:auto; max-width:100%; height:auto; padding-top: 32px; padding-bottom: 32px;">
+  <div class="horizontal-scroll">
+    <div class="screen" id="home">
+      <div class="lenis-section">
+        <div>
+          <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width="100%">
+          <div class="cinemaTitle">
+            <img src="cinema-title.png" alt="CINEMA title" style="display:block; margin:auto; width:auto; max-width:100%; height:auto; padding-top: 32px; padding-bottom: 32px;">
+          </div>
+          <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width="100%">
+          <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/560f61fabd69a41eef57b0c2323ac7e6c176d670_arrowforpopcorn-removebg-preview.png" width="30%" style="display:block; margin:auto;">
+        </div>
+        <div class="pathToCinema">
+          <p>Grab your snacks, and go to the</p>
+          <a href="demo.html">
+            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/116080c17f360147f01f4a482f54647e087c3d0a_untitled_design__1_.png" width="100%">
+          </a>
+        </div>
       </div>
-      <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width="100%">
     </div>
+    <div class="screen" id="requirements">
+        <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width = 100%>
+        <div class = "Requirements"> 
+            <div class = "requirementsText">
+              <h2>Requirements</h2>
+              <p>Make a JS animation in canvas that tells a story. Make sure it has a beginning, middle, and end.</p>
+            </div>
+            <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/24d1f3409a538298d4a484c3cc3409aac4dc4de9_filmroll-removebg-preview.png" height = 100% align = "right" alt = "flower" style="transform: translate(-60px,0);">
+          </div>
+          <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width = 100%>
+          <div class="pathToCinema">
+            <p>Grab your snacks, and go to the</p>
+            <a href="demo.html">
+              <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/116080c17f360147f01f4a482f54647e087c3d0a_untitled_design__1_.png" width="100%">
+            </a>
+          </div>
+    </div>
+    <div class="screen" id="animationExamples">
+        <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width = 100%>
+        <div class = "Pop" style="width:100%;"> 
+            <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/d68dce2721c8f1408220ab98e40c575eb7fbd955_popcontainer__713_x_1080_px_.png" height = 100% align = "left" alt = "flower" style="transform: translate(-60px,0);">
+            <div class = "popText">
+            <h2>Make your animation pop!</h2>
+            <p>Make your animation pop! Turn it into something others would actually want to watch. Make a creative plot.</p>
+            </div>
+        </div>
+        <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width = 100%>
+        <div class="pathToCinema">
+            <p>Grab your snacks, and go to the</p>
+            <a href="demo.html">
+              <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/116080c17f360147f01f4a482f54647e087c3d0a_untitled_design__1_.png" width="100%">
+            </a>
+          </div>
+    </div>
+    <div class="screen" id="getStarted">
+        <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png", width = 100%;>
+
+    <div class = "LetsGo">
+        <div class = "letsGoText">
+            <h2>Lights, Camera, Action!</h2>
+            <p>Time to show what you know! Go <a href="https://github.com/Dandililacs/popcornDemoAnimation">here</a> to see examples and find instructions.</p> 
+        </div>
+    <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/dd31fca0a5d6b0dfaa05c9050527642bfc0009c3_untitled_design.png" height =100%; align = "right" alt = "flower" style="transform: translate(-60px,0);">
+  </div>
+  <div class = "screen" id="submit">
+    <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png", width = 100%;>
+<div class = "buttons">
+    <a href = "https://airtable.com/appqO60vw6GXznRmo/pagg9UviFhzz6M8BL/form"> <!--Actually working submission button-->
+      <button class = "submissionButton">
+              GET YOUR POPCORN!
+      </button>
+    </a> 
+    <a href = "https://hackclub.slack.com/archives/C0936AVS683"> <!--Yay button for slack-->
+      <button class = "helpButton">
+              NEED SOME HELP?
+      </button>
+    </a> 
+    </div>
+    <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png", width = 100%;>
     <div class="pathToCinema">
-      <p>Grab your snacks, and go to the</p>
-      <a href="demo.html">
-        <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/116080c17f360147f01f4a482f54647e087c3d0a_untitled_design__1_.png" width="100%">
-      </a>
+        <p>Grab your snacks, and go to the</p>
+        <a href="demo.html">
+          <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/116080c17f360147f01f4a482f54647e087c3d0a_untitled_design__1_.png" width="100%">
+        </a>
+      </div>
+  </div>
+
+  
+
     </div>
   </div>
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.18/bundled/lenis.min.js"></script>
   <script>
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+    // Optionally, you can initialize Lenis for smooth scroll, but native scroll-behavior is already smooth
+    // const lenis = new Lenis({ wrapper: document.querySelector('.horizontal-scroll'), orientation: 'horizontal' });
+    // function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    // requestAnimationFrame(raf);
   </script>
 </body>
-</html>
+</html> 
