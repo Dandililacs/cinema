@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.18/bundled/lenis.min.js"></script>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       overflow-x: hidden;
@@ -40,16 +40,9 @@
           </div>
           <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png" width="100%">
           <div class = "instructions">
-          <h2> click the right arrow key on your keyboard to proceed</h2>
+          <h2> click on the screen and press the right arrow key on your keyboard to proceed</h2>
           </div>
-          <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/560f61fabd69a41eef57b0c2323ac7e6c176d670_arrowforpopcorn-removebg-preview.png" width="30%" style="display:block; margin:auto;">
-          
-          <div class="pathToCinema">
-            <p>Grab your snacks, and go to the</p>
-            <a href="demo.html">
-              <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/116080c17f360147f01f4a482f54647e087c3d0a_untitled_design__1_.png" width="100%">
-            </a>
-          </div>
+          <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/560f61fabd69a41eef57b0c2323ac7e6c176d670_arrowforpopcorn-removebg-preview.png" width="20%" style="display:block; margin:auto;">
         </div>
         
       </div>
@@ -102,19 +95,51 @@
       </button>
     </a> 
     </div>
-    <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png", width = 100%;>
+    <img src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/f6ca7e30152325306d0cdaaf4e3167c40b7c8417_filmtape.png", width = 100%;> 
+  </div>
+    
     
   </div>
-
-  
-
-    </div>
+  <div class = "screen" id="pathToCinema">
+    <p>Grab your snacks, and go to the</p>
+    <a href="demo.html">
+      <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/116080c17f360147f01f4a482f54647e087c3d0a_untitled_design__1_.png" width="100%">
+    </a>
   </div>
+</div>
+  
   <script>
-    // Optionally, you can initialize Lenis for smooth scroll, but native scroll-behavior is already smooth
-    // const lenis = new Lenis({ wrapper: document.querySelector('.horizontal-scroll'), orientation: 'horizontal' });
-    // function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-    // requestAnimationFrame(raf);
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.horizontal-scroll');
+      const screens = Array.from(document.querySelectorAll('.screen'));
+      let currentIndex = 0;
+      function scrollToScreen(index) {
+        if (index < 0 || index >= screens.length) return;
+        screens[index].scrollIntoView({behavior: 'smooth', inline: 'start'});
+        currentIndex = index;
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+          scrollToScreen(currentIndex + 1);
+        } else if (e.key === 'ArrowLeft') {
+          scrollToScreen(currentIndex - 1);
+        }
+      });
+      // Optional: update currentIndex on scroll (for mouse/touch users)
+      container.addEventListener('scroll', function() {
+        let minDist = Infinity;
+        let closest = 0;
+        screens.forEach((screen, i) => {
+          const rect = screen.getBoundingClientRect();
+          const dist = Math.abs(rect.left);
+          if (dist < minDist) {
+            minDist = dist;
+            closest = i;
+          }
+        });
+        currentIndex = closest;
+      });
+    });
   </script>
 </body>
 </html> 
